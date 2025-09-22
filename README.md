@@ -20,11 +20,11 @@ Primary sources are:
 - [Student Housing Data (2016 - 2024)](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?usp=drive_link&ouid=107346197263951251461&rtpof=true&sd=true)
 - [Shape files for neighborhoods](https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-tracts)
 
-## Modeling Data
+## Modeling Data (TBD)
 
 The project will begin with descriptive analysis to understand coverage, quality, and trends, computing clear indicators (e.g., student share of rental units, violation rates, and severity summaries) at the district and property levels. If time allows, the project will have a lightweight predictive component that estimates next‑period non‑compliance risk.
 
-## Visualization of Data
+## Visualization of Data (TBD)
 
 Most important visualizations will be about:
 - Student Share by District Over Time 
@@ -37,6 +37,6 @@ Most important visualizations will be about:
 
 In the case of how to visualize these, it is to be determined.
 
-## Test Plan
+## Test Plan (TBD)
 
 If modeling, withhold 20% of time‑sliced data (e.g., last year per district) for out‑of‑sample checks and use time-aware splits (e.g., Train: 2016–2021, Val: 2022, Test: 2023–2024).

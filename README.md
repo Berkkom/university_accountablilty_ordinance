@@ -45,7 +45,7 @@ Sources and Access Methods:
 
 All datasets will be cleaned, joined via geocoded addresses or parcel IDs, and validated for consistency and temporal coverage.
 
-## Data Analysis & Modeling
+## Data Analysis & Modeling (TBD)
 
 The project will begin with descriptive analytics:
 
@@ -60,7 +60,7 @@ If the modeling stage is reached:
 - Validate on 2022 data, test on 2023–2024
 - Target: AUROC ≥ 0.75 for predicting high-risk landlords
 
-## Visualizations
+## Visualizations (TBD)
 
 Key outputs (finalized post-EDA):
 

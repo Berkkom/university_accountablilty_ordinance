@@ -2,41 +2,77 @@
 
 ## Project Description
 
-Boston's University Accountability Ordinance (UAO) requires institutions to report data relevant to off‑campus student housing. The project will assemble, standardize, and analyze the past decade of student‑housing‑related data (enrollment by address, inspections/violations, 311 complaints, property assessment, and geospatial context) to quantify student presence in rental markets, characterize housing conditions, and surface non‑compliance patterns.
+Boston’s University Accountability Ordinance (UAO) requires local universities to annually report data on off-campus student housing. This project will consolidate, standardize, and analyze a decade’s worth of student-housing-related datasets (2016–2024) to assess student impact on the rental market and identify compliance issues among landlords and properties.
+
+Rather than examining every possible factor, the project focuses on three specific dimensions of accountability:
+
+- Student Occupancy Patterns — measuring where and how student populations are distributed across Boston’s neighborhoods and rental units.
+- Housing Condition and Safety — identifying code violations and complaint types that most frequently affect student-linked properties.
+- Landlord Compliance Behavior — detecting landlords with repeated or severe violations relative to city averages.
 
 ## Goals
 
-The project will compute the share of rental units occupied by students and the trend over time, characterize off‑campus housing conditions for student‑linked addresses, summarize the spectrum and severity of violations identify, non‑compliant landlords and spatial clusters, and track assessed property values (and/or rent proxies) for student‑linked parcels.
+The project’s refined objectives are:
+
+### Quantify Student Rental Presence
+- Compute the annual share of rental units occupied by students for each Boston neighborhood (2016–2024).
+- Success Metric: Accurate student share computed for ≥95% of properties linked to known student addresses.
+
+### Characterize Housing Conditions
+- Categorize violations and 311 complaints associated with student-linked properties, focusing on:
+  - Sanitation issues (e.g., pest control, waste disposal),
+  - Safety hazards (e.g., missing smoke detectors, structural damage),
+  - Over-occupancy or unpermitted conversions.
+- Success Metric: Generate violation rate distributions per 1,000 student-linked properties and identify top 5 violation types per district.
+
+### Identify Non-Compliant Landlords
+- Define “non-compliance” as ≥3 violations within a two-year window or ≥2 severe (safety-related) violations.
+- Flag repeat offenders and map clusters of non-compliance using DBSCAN.
+- Success Metric: Correctly identify ≥90% of landlords appearing in the city’s public enforcement records for 2023–2024.
+
+If time permits, an exploratory predictive model will estimate the probability of non-compliance in the next reporting period based on violation history and property attributes.
 
 ## Data Collection
 
-Acquisition of Data: Use official application programming interfaces (APIs) where provided; otherwise acquire datasets via documented bulk download endpoints.
+Sources and Access Methods:
 
-Primary sources are:
-- [Building and Property Violations](https://data.boston.gov/dataset/building-and-property-violations1/resource/800a2663-1d6a-46e7-9356-bedb70f5332c)
-- [311 Service Request](https://data.boston.gov/dataset/311-service-requests)
-- [SAM Addresses](https://data.boston.gov/dataset/live-street-address-management-sam-addresses)
-- [Property Assessment Data](https://data.boston.gov/dataset/property-assessment)
-- [Student Housing Data (2016 - 2024)](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?usp=drive_link&ouid=107346197263951251461&rtpof=true&sd=true)
-- [Shape files for neighborhoods](https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-tracts)
+- Building and Property Violations — City of Boston Inspectional Services API
+- 311 Service Requests — Boston Open Data Portal (API + bulk CSV)
+- Property Assessment Data — Boston Assessing Department bulk download
+- Student Housing Reports (2016–2024) — UAO submissions from participating universities
+- SAM Address Dataset — Address standardization reference
+- Neighborhood Shapefiles — Boston GIS Open Data
 
-## Modeling Data (TBD)
+All datasets will be cleaned, joined via geocoded addresses or parcel IDs, and validated for consistency and temporal coverage.
 
-The project will begin with descriptive analysis to understand coverage, quality, and trends, computing clear indicators (e.g., student share of rental units, violation rates, and severity summaries) at the district and property levels. If time allows, the project will have a lightweight predictive component that estimates next‑period non‑compliance risk.
+## Data Analysis & Modeling
 
-## Visualization of Data (TBD)
+The project will begin with descriptive analytics:
 
-Most important visualizations will be about:
-- Student Share by District Over Time 
-- Violations Affecting Student Addresses 
-- Bad Landlords Overview 
-- Problem‑Property Map 
-- 311 Complaints vs. Violations 
-- Property Values vs. Student Presence 
-- Hotspot Clusters using DBSCAN map overlay.
+- Compute district-level indicators (student share, violation rates, complaint density)
+- Aggregate violation categories and severity scores
+- Cross-tabulate 311 complaint frequency vs. violation severity
+- Identify persistent clusters of student-linked violations using DBSCAN
 
-In the case of how to visualize these, it is to be determined.
+If the modeling stage is reached:
+
+- Train a logistic regression or gradient-boosted model on 2016–2021 data
+- Validate on 2022 data, test on 2023–2024
+- Target: AUROC ≥ 0.75 for predicting high-risk landlords
+
+## Visualizations
+
+Key outputs (finalized post-EDA):
+
+- Student Share by District Over Time
+- Top Violation Types Affecting Student Addresses
+- Non-Compliant Landlords Map
+- 311 Complaints vs. Violations Scatter
+- Property Values vs. Student Density Trend
+- Hotspot Clusters (DBSCAN Overlay on Map)
 
 ## Test Plan (TBD)
 
-If modeling, withhold 20% of time‑sliced data (e.g., last year per district) for out‑of‑sample checks and use time-aware splits (e.g., Train: 2016–2021, Val: 2022, Test: 2023–2024).
+- Time-Aware Split: Train (2016–2021), Validate (2022), Test (2023–2024)
+- Evaluation Metrics: Precision/Recall for compliance detection; R² for rent/value estimation
+- Error Analysis: Review false positives/negatives for violation classification and geocoding accuracy.

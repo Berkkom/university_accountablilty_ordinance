@@ -36,12 +36,12 @@ If time permits, an exploratory predictive model will estimate the probability o
 
 Sources and Access Methods:
 
-- Building and Property Violations — City of Boston Inspectional Services API
-- 311 Service Requests — Boston Open Data Portal (API + bulk CSV)
-- Property Assessment Data — Boston Assessing Department bulk download
-- Student Housing Reports (2016–2024) — UAO submissions from participating universities
-- SAM Address Dataset — Address standardization reference
-- Neighborhood Shapefiles — Boston GIS Open Data
+- [Building and Property Violations](https://data.boston.gov/dataset/building-and-property-violations1/resource/800a2663-1d6a-46e7-9356-bedb70f5332c) — City of Boston Inspectional Services API
+- [311 Service Requests](https://data.boston.gov/dataset/311-service-requests) — Boston Open Data Portal (API + bulk CSV)
+- [Property Assessment Data](https://data.boston.gov/dataset/property-assessment) — Boston Assessing Department bulk download
+- [Student Housing Reports (2016–2024)](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?usp=drive_link&ouid=107346197263951251461&rtpof=true&sd=true) — UAO submissions from participating universities
+- [SAM Address Dataset](https://data.boston.gov/dataset/live-street-address-management-sam-addresses) — Address standardization reference
+- [Neighborhood Shapefiles](https://data.boston.gov/dataset/boston-neighborhood-boundaries-approximated-by-2020-census-tracts) — Boston GIS Open Data
 
 All datasets will be cleaned, joined via geocoded addresses or parcel IDs, and validated for consistency and temporal coverage.
 

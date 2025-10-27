@@ -1,0 +1,18 @@
+# === DATA FILES ===
+notebooks/data/
+!notebooks/data/README.md   # (you can keep a readme describing sources)
+!notebooks/data/sample_*.csv  # (optional: small 100-row samples)
+
+# === OUTPUTS ===
+visualizations/
+!visualizations/*.png
+!visualizations/*.csv
+
+# === ENVIRONMENT ===
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# === SYSTEM ===
+.DS_Store
+Thumbs.db

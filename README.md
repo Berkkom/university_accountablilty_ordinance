@@ -6,10 +6,8 @@
 
 ## Abstract
 
-This project analyzes Boston’s University Accountability Ordinance (UAO) datasets to understand the impact of university students on the city’s rental housing market and compliance landscape.
-Focusing on building and property violations from 2016–2024, we clean and explore open data from Boston’s Inspectional Services Department, visualize violation patterns, and build an early logistic regression model to predict violation severity from text descriptions.
-Preliminary results show near-perfect classification performance, indicating that textual features alone strongly encode violation seriousness.
-These findings validate data consistency and set the foundation for integrating 311 requests, property assessments, and student address data in the final phase.
+This project analyzes Boston’s University Accountability Ordinance (UAO) datasets to understand the impact of university students on the city’s rental housing market and compliance landscape. Focusing on building and property violations from 2016–2024, we clean and explore open data from Boston’s Inspectional Services Department, visualize violation patterns, and build an early logistic regression model to predict violation severity from text descriptions. Preliminary results show near-perfect classification performance, indicating that textual features alone strongly encode violation seriousness. These findings validate data consistency and set the foundation for integrating 311 requests, property assessments, and student address data in the final phase.
+
 ---
 
 ## 1. Project Overview

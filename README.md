@@ -93,7 +93,7 @@ The text-based model achieved **near-perfect predictive performance**.
 This indicates that violation descriptions contain highly discriminative language for severity (e.g., “UNSAFE STRUCTURE”, “FIRE”, “ELECTRICAL HAZARD”).  
 Future work will validate whether this performance generalizes across different years and address categories.
 
-🔍 Model Interpretation
+Model Interpretation
 
 The logistic regression classifier demonstrates that violation text alone is a powerful signal for predicting severity.
 Words and phrases such as “unsafe,” “fire,” “electrical,” and “structure” are strongly associated with severe cases, while terms like “maintenance,” “trash,” and “debris” correspond to minor issues.

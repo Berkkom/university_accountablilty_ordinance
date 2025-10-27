@@ -4,7 +4,7 @@ notebooks/data/
 !notebooks/data/sample_*.csv  # (optional: small 100-row samples)
 
 # === OUTPUTS ===
-visualizations/
+!visualizations/
 !visualizations/*.png
 !visualizations/*.csv
 

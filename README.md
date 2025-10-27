@@ -1,6 +1,4 @@
-from pathlib import Path
-
-readme_content = """# 🏙️ University Accountability Ordinance (UAO) Project — Midterm Report  
+# 🏙️ University Accountability Ordinance (UAO) Project — Midterm Report  
 **Boston University CS506 (Fall 2025)**  
 **Date:** October 27, 2025  
 
@@ -108,8 +106,4 @@ Future work will validate whether this performance generalizes across different 
 - Interactive geospatial dashboard.  
 - Compliance risk heatmap by neighborhood.  
 - Full summary linking **student density** to **violation severity and landlord patterns**.
-
----
-
-## 8. Repository Structure
 

@@ -52,7 +52,7 @@ Shows a clear decline in total reported violations since 2018.
 Most frequent categories include:
 - *Failure to Obtain Permit*  
 - *Unsafe and Dangerous*  
-- *Work Without Permit*  
+- *Maintenance*  
 
 ### Violation Severity Distribution
 Majority of violations are **minor**, with approximately **10% classified as severe**.
@@ -87,6 +87,12 @@ The text-based model achieved **near-perfect predictive performance**.
 This indicates that violation descriptions contain highly discriminative language for severity (e.g., “UNSAFE STRUCTURE”, “FIRE”, “ELECTRICAL HAZARD”).  
 Future work will validate whether this performance generalizes across different years and address categories.
 
+🔍 Model Interpretation
+
+The logistic regression classifier demonstrates that violation text alone is a powerful signal for predicting severity.
+Words and phrases such as “unsafe,” “fire,” “electrical,” and “structure” are strongly associated with severe cases, while terms like “maintenance,” “trash,” and “debris” correspond to minor issues.
+This reveals that the city’s violation data is linguistically consistent — the wording used in descriptions reliably encodes violation seriousness.
+The model’s AUROC of 1.0 and PR-AUC of 0.997 confirm that textual features alone can almost perfectly separate severe from non-severe violations, providing a strong foundation for future predictive modeling.
 ---
 
 ## 7. Next Steps

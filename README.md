@@ -109,8 +109,7 @@ The model’s AUROC of 1.0 and PR-AUC of 0.997 confirm that textual features alo
 - Normalize address fields using **SAM reference data**.
 
 ### Modeling
-- Evaluate generalization across years and neighborhoods.  
-- Incorporate tree-based models (Gradient Boosting / XGBoost).  
+- Evaluate generalization across years and neighborhoods.    
 - Introduce **spatial clustering (DBSCAN)** for non-compliant landlord detection.  
 - Extend classification to predict *future non-compliance probability*.
 

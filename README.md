@@ -2,7 +2,7 @@
 **Boston University CS506 (Fall 2025)**  
 **Date:** December 10, 2025  
 
-**Final Presentation Video:** <!-- TODO: paste YouTube link here -->
+**Final Presentation Video: https://youtu.be/IJW0LfH9E8I** <!-- TODO: paste YouTube link here -->
 
 This project analyzes Boston’s University Accountability Ordinance (UAO) data, building/property code violations, 311 housing-related requests, standardized address (SAM) data, and university-reported student housing addresses to study housing quality and landlord non-compliance in student-dense areas of Boston.
 

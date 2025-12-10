@@ -12,10 +12,10 @@ This project analyzes Boston’s University Accountability Ordinance (UAO) data,
 
 ### Required data (before running)
 
-Raw data files are **not** included in this repository (per course policy).  
-To fully reproduce the analysis, download the following from the City of Boston open data portal (and provided UAO spreadsheet) and place them under `data/raw/`:
+Raw data files are **not** included in this repository.  
+To fully reproduce the analysis, download the following from the City of Boston open data portal (and provided UAO spreadsheet) and place them under `data/raw/`. You can obtain these by clicking the links in the **Data Sources** section below and saving/renaming the downloads to match the filenames listed here:
 
-- `data/raw/violations_2016_2024.csv`
+- `data/raw/violations_2016_2024.csv` 
 - `data/raw/311_2016.csv`
 - `data/raw/311_2017.csv`
 - `data/raw/311_2018.csv`
@@ -25,12 +25,15 @@ To fully reproduce the analysis, download the following from the City of Boston 
 - `data/raw/311_2022.csv`
 - `data/raw/311_2023.csv`
 - `data/raw/311_2024.csv`
-- `data/raw/sam/live_street_address_management_sam_addresses.csv`
+- `data/raw/live_street_address_management_sam_addresses.csv`
 - `data/raw/uao/uao_student_housing.csv`
 
 The notebook expects these paths to exist. Once they are present, you can run the commands below.
 
-### 1.1. Set up the environment
+### Set up the environment
+
+This will execute `notebooks/UAO_midterm.ipynb` and write
+`notebooks/UAO_midterm_executed.ipynb` with all cells run.
 
 From the project root:
 
@@ -38,7 +41,10 @@ From the project root:
 make venv
 make run-notebook
 make test
+
 ```
+These commands will create the virtual environment, execute the main analysis notebook,
+and run a small pytest-based smoke test suite.
 
 
 Boston's **University Accountability Ordinance (UAO)** requires universities to annually report data about **off-campus student housing**. This project combines:
@@ -62,10 +68,10 @@ All data were obtained from **Boston's Open Data Portal** or provided UAO spread
 
 | Dataset | Description | Usage in this project |
 |---------|-------------|----------------------|
-| Building and Property Violations (2016–2024) | Code violations reported to the Inspectional Services Department. | Core dataset: severity labels, temporal trends, property-level aggregation. |
+| [Building and Property Violations (2016–2024)](https://data.boston.gov/dataset/building-and-property-violations1/resource/800a2663-1d6a-46e7-9356-bedb70f5332c) | Code violations reported to the Inspectional Services Department. | Core dataset: severity labels, temporal trends, property-level aggregation. |
 | [311 Service Requests (2016–2024)](https://data.boston.gov/dataset/311-service-requests) | Public complaints and service requests. | Filtered to housing-related reasons; annual counts used to compare complaint volume vs. violations. |
-| SAM Addresses | Standardized address management (address IDs, geocoordinates, wards, neighborhoods). | Used to normalize addresses, join violations/UAO records, and obtain lat/lon + ward. |
-| UAO Student Housing Reports [] | University-reported off-campus student addresses by year and student type. | Mapped to SAM IDs to flag properties as student-linked and count students per property. |
+| [SAM Addresses](https://data.boston.gov/dataset/live-street-address-management-sam-addresses) | Standardized address management (address IDs, geocoordinates, wards, neighborhoods). | Used to normalize addresses, join violations/UAO records, and obtain lat/lon + ward. |
+| [UAO Student Housing Reports](https://docs.google.com/spreadsheets/d/11X4VvywkSodvvTk5kkQH7gtNPGovCgBq/edit?usp=drive_link&ouid=107346197263951251461&rtpof=true&sd=true) | University-reported off-campus student addresses by year and student type. | Mapped to SAM IDs to flag properties as student-linked and count students per property. |
 
 ## Data Processing
 

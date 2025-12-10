@@ -63,10 +63,9 @@ All data were obtained from **Boston's Open Data Portal** or provided UAO spread
 | Dataset | Description | Usage in this project |
 |---------|-------------|----------------------|
 | Building and Property Violations (2016–2024) | Code violations reported to the Inspectional Services Department. | Core dataset: severity labels, temporal trends, property-level aggregation. |
-| 311 Service Requests (2016–2024) | Public complaints and service requests. | Filtered to housing-related reasons; annual counts used to compare complaint volume vs. violations. |
+| [311 Service Requests (2016–2024)](https://data.boston.gov/dataset/311-service-requests) | Public complaints and service requests. | Filtered to housing-related reasons; annual counts used to compare complaint volume vs. violations. |
 | SAM Addresses | Standardized address management (address IDs, geocoordinates, wards, neighborhoods). | Used to normalize addresses, join violations/UAO records, and obtain lat/lon + ward. |
-| UAO Student Housing Reports | University-reported off-campus student addresses by year and student type. | Mapped to SAM IDs to flag properties as student-linked and count students per property. |
-| Property Assessments | Ownership and property value data. | Not integrated in the final notebook due to scope/time; natural extension for future work. |
+| UAO Student Housing Reports [] | University-reported off-campus student addresses by year and student type. | Mapped to SAM IDs to flag properties as student-linked and count students per property. |
 
 ## Data Processing
 

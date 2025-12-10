@@ -1,8 +1,37 @@
-# University Accountability Ordinance (UAO) Project
+# University Accountability Ordinance (UAO) Project — Final Report  
+**Boston University CS506 (Fall 2025)**  
+**Date:** December 10, 2025  
 
-**Boston University CS506 (Fall 2025)**
+**Final Presentation Video:** <!-- TODO: paste YouTube link here -->
 
-## Project Overview
+This project analyzes Boston’s University Accountability Ordinance (UAO) data, building/property code violations, 311 housing-related requests, standardized address (SAM) data, and university-reported student housing addresses to study housing quality and landlord non-compliance in student-dense areas of Boston.
+
+---
+
+## 1. How to Build and Run the Code
+
+### 1.0. Required data (before running)
+
+Raw data files are **not** included in this repository (per course policy).  
+To fully reproduce the analysis, download the following from the City of Boston open data portal (and provided UAO spreadsheet) and place them under `data/raw/`:
+
+- `data/raw/violations_2016_2024.csv`
+- `data/raw/311_2016_2024.csv` (or your concatenated 311 export)
+- `data/raw/sam/live_street_address_management_sam_addresses.csv`
+- `data/raw/uao/uao_student_housing.csv`
+
+The notebook expects these paths to exist. Once they are present, you can run the commands below.
+
+### 1.1. Set up the environment
+
+From the project root:
+
+```bash
+make venv
+make run-notebook
+make test
+```
+
 
 Boston's **University Accountability Ordinance (UAO)** requires universities to annually report data about **off-campus student housing**. This project combines:
 

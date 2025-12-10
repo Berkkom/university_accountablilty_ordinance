@@ -13,6 +13,7 @@ This project analyzes Boston’s University Accountability Ordinance (UAO) data,
 ### Required data (before running)
 
 Raw data files are **not** included in this repository.  
+
 To fully reproduce the analysis, download the following from the City of Boston open data portal (and provided UAO spreadsheet) and place them under `data/raw/`. You can obtain these by clicking the links in the **Data Sources** section below and saving/renaming the downloads to match the filenames listed here:
 
 - `data/raw/violations_2016_2024.csv` 

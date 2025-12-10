@@ -8,15 +8,23 @@ This project analyzes Boston’s University Accountability Ordinance (UAO) data,
 
 ---
 
-## 1. How to Build and Run the Code
+## How to Build and Run the Code
 
-### 1.0. Required data (before running)
+### Required data (before running)
 
 Raw data files are **not** included in this repository (per course policy).  
 To fully reproduce the analysis, download the following from the City of Boston open data portal (and provided UAO spreadsheet) and place them under `data/raw/`:
 
 - `data/raw/violations_2016_2024.csv`
-- `data/raw/311_2016_2024.csv` (or your concatenated 311 export)
+- `data/raw/311_2016.csv`
+- `data/raw/311_2017.csv`
+- `data/raw/311_2018.csv`
+- `data/raw/311_2019.csv`
+- `data/raw/311_2020.csv`
+- `data/raw/311_2021.csv`
+- `data/raw/311_2022.csv`
+- `data/raw/311_2023.csv`
+- `data/raw/311_2024.csv`
 - `data/raw/sam/live_street_address_management_sam_addresses.csv`
 - `data/raw/uao/uao_student_housing.csv`
 
